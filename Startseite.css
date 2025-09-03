@@ -1,0 +1,172 @@
+/* ================================
+   GLOBAL STYLES & BACKGROUND
+   ================================ */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5); 
+  z-index: -1;                 
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: #ffffff; 
+
+  /* Hintergrundbild */
+  background-image: url("hintergrund.jpg");
+  background-size: cover;        
+  background-repeat: no-repeat;  
+  background-attachment: fixed;  
+  background-position: center;   
+}
+
+/* ================================
+   HEADINGS
+   ================================ */
+h1, h2 {
+  color: #f3c623;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* ================================
+   SECTIONS (allgemein, z. B. Story)
+   ================================ */
+.section {
+  margin: 0 auto 3rem auto;
+  max-width: 1200px;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* ================================
+   CARD LAYOUT (z. B. Klassenkarten)
+   ================================ */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card {
+  flex: 0 1 220px;          
+  min-height: 280px;
+  background: #2a2a2e;      
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;          
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+  color: #f3c623;       
+  font-size: 1.1rem;
+}
+
+.card p, .card ul, .card li {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #ffffff;          
+  margin: 0.25rem 0;
+}
+
+/* ================================
+   LISTEN
+   ================================ */
+ul {
+  list-style: none; 
+  padding: 0;
+}
+
+/* ================================
+   HINWEISBOXEN
+   ================================ */
+.note {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #ffffff; 
+  text-align: center;
+}
+
+/* ================================
+   LINKS
+   ================================ */
+a {
+  color: #f3c623; 
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: #ffdf80; 
+}
+
+/* ================================
+   BILDER
+   ================================ */
+/* Bilder in Karten (z. B. Klassenkarten) */
+.card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-bottom: 1px solid #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Bilder in Tier-Listen-Karten */
+.tier-block img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+.site-footer {
+  background: #1f1f23;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ffffff; 
+}
+
+/* ================================
+   STORY GRID (Story-Abschnitte)
+   ================================ */
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.story-grid section {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: .75rem;
+  background: #2a2a2e; 
+  color: #ffffff;      
+}
+
+.story-grid section p,
+.story-grid section li {
+  color: #ffffff; 
+}
+
+.story-grid h2 {
+  margin-top: 0;
+}
